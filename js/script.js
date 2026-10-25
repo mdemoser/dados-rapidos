@@ -23,6 +23,11 @@ document.querySelectorAll('.btn-copiar').forEach(function(botao){
 
 //Restar todos os campos
 document.getElementById('btn-limpar').addEventListener('click', function () {
+
+    if(!confirm('Tem certeza de que quer apagar os dados?')){
+        return;
+    }
+
     document.querySelectorAll('input[type="text"]').forEach(function (input){
         input.value = '';
     });
